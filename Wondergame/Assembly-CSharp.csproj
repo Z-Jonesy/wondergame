@@ -99,10 +99,13 @@
      <Compile Include="Assets\Project\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Project\Scripts\CharacterMove.cs" />
      <Compile Include="Assets\Project\Scripts\CharacterSettings.cs" />
+     <Compile Include="Assets\Project\Scripts\EnemyAudio.cs" />
      <Compile Include="Assets\Project\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Project\Scripts\GameState.cs" />
      <Compile Include="Assets\Project\Scripts\Pickup.cs" />
      <Compile Include="Assets\Project\Scripts\PlayerInventory.cs" />
+     <Compile Include="Assets\Project\Scripts\UIGameOver.cs" />
+     <Compile Include="Assets\Project\Scripts\UIPoints.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />

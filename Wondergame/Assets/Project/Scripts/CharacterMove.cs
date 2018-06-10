@@ -8,23 +8,15 @@ public class CharacterMove : MonoBehaviour {
     private Rigidbody _rigidbody;
     private Vector3 _movement;
     private Animator _animator;
-
+    private AudioSource _audioSource;
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
-
-	// Use this for initialization
-	private void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	private void Update () {
-		
-	}
 
     private void FixedUpdate()
     {
@@ -33,6 +25,23 @@ public class CharacterMove : MonoBehaviour {
 
         Move(inputHorizontal, inputVertical);
         SetAnimation(inputHorizontal, inputVertical);
+        SetAudio(inputHorizontal, inputVertical);
+    }
+
+    private void SetAudio(float inputHorizontal, float inputVertical)
+    {
+        if (isMoving(inputHorizontal, inputVertical))
+        {
+            if (!_audioSource.isPlaying) _audioSource.Play();
+        } else
+        {
+            if (_audioSource.isPlaying) _audioSource.Stop();
+        }
+    }
+
+    private bool isMoving(float inputHorizontal, float inputVertical)
+    {
+        return Math.Abs(inputHorizontal) > 0 || Math.Abs(inputVertical) > 0;
     }
 
     private void Move(float inputHorizontal, float inputVertical)
@@ -41,7 +50,7 @@ public class CharacterMove : MonoBehaviour {
         _movement = _movement.normalized * speed * Time.deltaTime;
         _rigidbody.MovePosition(transform.position + _movement);
 
-        if (inputHorizontal != 0 || inputVertical !=0)
+        if (isMoving(inputHorizontal, inputVertical))
         {
             Rotate(inputHorizontal, inputVertical);
         }
