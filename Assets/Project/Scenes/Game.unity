@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9245283, g: 0.7718939, b: 0.7718939, a: 0.49803922}
+  m_Color: {r: 0.9245283, g: 0.7718939, b: 0.7718939, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -774,6 +774,10 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1966479039967262, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
   m_IsPrefabAsset: 0
@@ -892,7 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9433962, g: 0.93004626, b: 0.37254903, a: 1}
+  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1227,6 +1231,10 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1966479039967262, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
   m_IsPrefabAsset: 0
@@ -1251,6 +1259,7 @@ GameObject:
   - component: {fileID: 1224561519}
   - component: {fileID: 1224561518}
   - component: {fileID: 1224561520}
+  - component: {fileID: 1224561521}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -1329,6 +1338,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25015b7bfb6bb7c4e9574e54a672c5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1224561521
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224561516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 278d2c36e85f4e748adff9220a4a1c6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1257769554
 Prefab:
   m_ObjectHideFlags: 0
@@ -1724,6 +1751,10 @@ Prefab:
     - target: {fileID: 1966479039967262, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
       propertyPath: m_Name
       value: Pickup (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966479039967262, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef07a3d93c0b328428e1f21e2432a1fa, type: 2}
@@ -2621,6 +2652,10 @@ Prefab:
     - target: {fileID: 4663893940571864, guid: 43c5810d2bc3f924291c68e622237238, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880714589666410, guid: 43c5810d2bc3f924291c68e622237238, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c5810d2bc3f924291c68e622237238, type: 2}

@@ -5,6 +5,7 @@ public class UIGameOver : MonoBehaviour {
 
     private GameState _gameState;
     private RectTransform[] _children;
+    private Animator _animator;
 
     private void Awake()
     {
@@ -12,6 +13,7 @@ public class UIGameOver : MonoBehaviour {
             .Where(rt => rt.gameObject != gameObject)
             .ToArray();
         _gameState = FindObjectOfType<GameState>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -29,6 +31,7 @@ public class UIGameOver : MonoBehaviour {
                 child.gameObject.SetActive(true);
                 }
             }
+        _animator.SetTrigger("GameOver");
     }
 
 }
